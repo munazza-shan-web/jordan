@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jordan Bryant | Senior Designer &amp; Drafter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2f5;--panel:#fff;--ink:#12233a;--mute:#4d5d70;--line:#12233a;--blue:#1f4e8c;--acc:#d9480f;--wa:#128c4a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a2b;--panel:#13243b;--ink:#e6edf5;--mute:#9db0c6;--line:#7f95b0;--blue:#7fb0ee;--acc:#ff8a4c;--wa:#25a65d}}
+:root[data-theme="dark"]{--bg:#0e1a2b;--panel:#13243b;--ink:#e6edf5;--mute:#9db0c6;--line:#7f95b0;--blue:#7fb0ee;--acc:#ff8a4c;--wa:#25a65d}
+html{scroll-padding-top:120px;scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif;
+background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px;background-blend-mode:soft-light}
+h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-weight:600;line-height:1.05;margin:0}
+a{color:var(--blue)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+/* site header */
+.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--panel);border-bottom:2px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--panel);z-index:21}
+.bar{max-width:1040px;margin:0 auto;padding:8px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{font:700 26px/1 "Barlow Condensed",sans-serif;color:var(--ink);text-decoration:none;margin-right:auto}
+nav{display:flex;gap:2px;overflow-x:auto;order:3;width:100%;scrollbar-width:none}
+nav a{padding:8px 12px;color:var(--ink);text-decoration:none;font-weight:500;white-space:nowrap;border-bottom:3px solid transparent}
+nav a:hover{border-color:var(--acc)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:2px solid var(--ink);color:var(--ink);text-decoration:none;font:500 15px/1.2 "IBM Plex Sans",sans-serif;background:transparent;cursor:pointer}
+.btn.p{background:var(--acc);border-color:var(--acc);color:#fff}
+.btn.wa{background:var(--wa);border-color:var(--wa);color:#fff}
+.btn svg{width:18px;height:18px;fill:currentColor}
+@media(min-width:860px){nav{order:0;width:auto}.brand{margin-right:0}.bar{flex-wrap:nowrap}nav{margin-right:auto;margin-left:16px}}
+.sheet{background:var(--panel);border:2px solid var(--line);margin:28px 0}
+.sheet>h2{font-size:clamp(28px,5vw,40px);padding:14px 20px;border-bottom:2px solid var(--line)}
+.sheet>h2 small{display:block;font:400 15px/1.4 "IBM Plex Sans",sans-serif;color:var(--mute);margin-top:6px}
+.pad{padding:20px}
+.hero{border:2px solid var(--line);background:var(--panel);margin-top:28px}
+.hero .main{padding:clamp(24px,6vw,56px) clamp(20px,4vw,44px)}
+.hero h1{font-size:clamp(56px,13vw,128px);font-weight:700;letter-spacing:-.01em}
+.hero p.lead{max-width:56ch;margin:18px 0 0;font-size:19px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.tb{display:grid;grid-template-columns:repeat(2,1fr);border-top:2px solid var(--line)}
+.tb div{padding:10px 16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px;color:var(--mute)}
+.tb b{display:block;color:var(--ink);font:600 24px/1.1 "Barlow Condensed",sans-serif}
+@media(min-width:760px){.tb{grid-template-columns:repeat(4,1fr)}.tb div:last-child{border-right:0}}
+/* gallery */
+.cat{padding:14px 20px 0;font:600 24px/1 "Barlow Condensed",sans-serif;color:var(--blue)}
+.grid{display:grid;grid-template-columns:1fr;gap:20px;padding:20px}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr}}
+.card{margin:0;border:1px solid var(--line);display:flex;flex-direction:column}
+.card button{all:unset;cursor:zoom-in;display:block;background:#fff;aspect-ratio:3/2}
+.card button:focus-visible{outline:3px solid var(--acc);outline-offset:-3px}
+.card img{width:100%;height:100%;object-fit:contain;display:block}
+.card figcaption{padding:12px 14px;border-top:1px solid var(--line);flex:1}
+.card b{display:block;font:600 22px/1.1 "Barlow Condensed",sans-serif;margin-bottom:4px}
+.card span{color:var(--mute);font-size:15px}
+dialog{border:2px solid var(--line);padding:0;max-width:96vw;max-height:94vh;background:var(--panel);color:var(--ink)}
+dialog::backdrop{background:rgba(5,12,22,.8)}
+dialog img{display:block;max-width:96vw;max-height:84vh;background:#fff}
+dialog div{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 12px}
+/* experience */
+.job{display:grid;gap:6px;padding:20px;border-bottom:1px solid var(--line)}
+.job:last-child{border:0}
+.job h3{font-size:28px}
+.job .m{color:var(--mute);font-size:15px}
+.job ul{margin:6px 0 0;padding-left:18px}
+.job li{margin-bottom:5px;max-width:78ch}
+@media(min-width:760px){.job{grid-template-columns:220px 1fr;gap:24px}}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.tags li{border:1px solid var(--line);padding:4px 12px;font-size:15px}
+.sk{display:grid;gap:18px;padding:20px}
+.sk h3{font-size:22px;color:var(--blue);margin-bottom:8px}
+@media(min-width:760px){.sk{grid-template-columns:1fr 1fr}}
+/* packages */
+.pk{display:grid;grid-template-columns:1fr;gap:20px;padding:20px}
+@media(min-width:900px){.pk{grid-template-columns:repeat(3,1fr)}}
+.pkg{border:2px solid var(--line);padding:18px;display:flex;flex-direction:column}
+.pkg.f{border-color:var(--acc)}
+.pkg h3{font-size:30px;margin-bottom:4px}
+.pkg .q{color:var(--mute);font-size:15px;margin:0 0 10px}
+.pkg ul{margin:0 0 18px;padding-left:18px;flex:1}
+.pkg li{margin-bottom:5px}
+.edu{display:grid;gap:20px;padding:20px}
+@media(min-width:760px){.edu{grid-template-columns:1fr 1fr}}
+.contact{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.contact h2{border-color:var(--bg)}
+.contact a.l{color:var(--bg);font-size:clamp(20px,4vw,30px);font-family:"Barlow Condensed",sans-serif;display:block;margin:6px 0}
+footer{text-align:center;color:var(--mute);font-size:14px;padding:12px 0 36px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="bar">
+    <a class="brand" href="#top">Jordan Bryant</a>
+    <nav aria-label="Sections">
+      <a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#packages">Packages</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="Jordan-Bryant-CV.pdf" download>Download CV</a>
+    <a class="btn wa" id="wa1" href="https://wa.me/17205256845?text=Hi%20Jordan%2C%20I%20saw%20your%20portfolio." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14c-.2.6-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.100-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.300 0 .5l-.3.500-.4.400c-.1.100-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.4.100.6-.1l.8-1c.2-.3.400-.2.600-.1l1.900.9c.3.100.5.200.5.300.1.200.1.800-.1 1.300z"/></svg>WhatsApp</a>
+  </div>
+</header>
+
+<div class="wrap" id="top">
+
+<section class="hero">
+  <div class="main">
+    <h1>Jordan Bryant</h1>
+    <p class="lead">Designer and drafter with ten years of fully remote work across civil, structural, MEP, architectural, mechanical, solar, and petroleum projects. I lead teams, write the automation that speeds them up, and deliver drawing sets that pass review.</p>
+    <div class="btns">
+      <a class="btn p" href="#projects">See projects</a>
+      <a class="btn" href="#packages">View packages</a>
+    </div>
+  </div>
+  <div class="tb">
+    <div><b>10 years</b>remote drafting and design</div>
+    <div><b>13</b>CAD platforms</div>
+    <div><b>8 engineers</b>led at once</div>
+    <div><b>400+ pages</b>largest plan set</div>
+  </div>
+</section>
+
+<section class="sheet" id="projects">
+  <h2>Projects<small>Completed work. Tap any drawing to enlarge it.</small></h2>
+
+  <div class="cat">Commercial</div>
+  <div class="grid">
+    <figure class="card"><button type="button"><img alt="Overall site plan for a motor fuel station with canopy, tanks, and truck turning analysis" src="images/fuel-station-site-plan.jpg"></button>
+      <figcaption><b>Motor fuel station site plan</b><span>Chula Vista, California. Tanks, canopy, propane area, and a 73 ft truck turning analysis in AutoTURN. Part of a six-sheet permit set.</span></figcaption></figure>
+  </div>
+
+  <div class="cat">Residential</div>
+  <div class="grid">
+    <figure class="card"><button type="button"><img alt="Cover page of a 30 by 50 foot two-bedroom cabin plan set" src="images/cabin-1410-cover.jpg"></button>
+      <figcaption><b>Yellowstone cabin, 1,410 sq ft</b><span>Helena, Montana. Two bed, two bath. Full set with foundation, framing, truss, porch, electrical, and header schedules.</span></figcaption></figure>
+    <figure class="card"><button type="button"><img alt="Main floor plan of the 1,410 square foot cabin" src="images/cabin-1410-floor-plan.jpg"></button>
+      <figcaption><b>Cabin main floor plan</b><span>Dimensioned layout with door and window tags for the same plan set.</span></figcaption></figure>
+    <figure class="card"><button type="button"><img alt="Cover page of a 28 by 54 foot cabin plan set with a covered porch and deck" src="images/cabin-1512-cover.jpg"></button>
+      <figcaption><b>Yellowstone cabin, 1,512 sq ft</b><span>Lolo, Montana. Two bed, two bath with a covered porch, deck, plumbing plan, and snow-load porch framing.</span></figcaption></figure>
+    <figure class="card"><button type="button"><img alt="Cover sheet for a 24 by 30 foot detached garage" src="images/detached-garage.jpg"></button>
+      <figcaption><b>Detached garage, 24 × 30 ft</b><span>Nederland, Colorado. Eight-sheet Revit set with monolithic foundation, engineered trusses, and 2021 IRC notes.</span></figcaption></figure>
+  </div>
+
+  <div class="cat">Landscape</div>
+  <div class="grid">
+    <figure class="card"><button type="button"><img alt="Landscape master plan for a five-building multifamily site with pool" src="images/landscape-multifamily.jpg"></button>
+      <figcaption><b>Multifamily master plan</b><span>Five buildings, central pool deck, pergola, trees, and shrub planting with full legend and theme boards.</span></figcaption></figure>
+    <figure class="card"><button type="button"><img alt="Landscape plan for a courtyard with turf, shade structures, and planters" src="images/landscape-courtyard.jpg"></button>
+      <figcaption><b>Courtyard plan</b><span>Turf lawn, steel shade structures, outdoor kitchen, planters, and a plant and theme palette.</span></figcaption></figure>
+    <figure class="card"><button type="button"><img alt="Landscape plan for a sloped residential lot with curving planting beds" src="images/landscape-residential-lot.jpg"></button>
+      <figcaption><b>Residential lot plan</b><span>Curving planting beds, lawn, and hardscape on an irregular lot, amended to meet HOA requirements.</span></figcaption></figure>
+    <figure class="card"><button type="button"><img alt="Landscape plan for a pool and patio renovation with outdoor kitchen" src="images/landscape-pool-patio.jpg"></button>
+      <figcaption><b>Pool and patio renovation</b><span>New pavers, turf, outdoor kitchen, hedge planting, and pool tile and coping updates.</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="sheet" id="skills">
+  <h2>Skills</h2>
+  <div class="sk">
+    <div><h3>Software</h3><ul class="tags"><li>AutoCAD</li><li>Civil 3D</li><li>Revit</li><li>SolidWorks</li><li>MicroStation</li><li>OpenRoads</li><li>Navisworks</li><li>Inventor</li><li>Fusion 360</li><li>Rhino</li><li>Bluebeam</li></ul></div>
+    <div><h3>Disciplines</h3><ul class="tags"><li>Civil</li><li>Structural</li><li>MEP</li><li>Architectural</li><li>Mechanical</li><li>PV solar</li><li>Landscape</li></ul></div>
+    <div><h3>Automation</h3><ul class="tags"><li>LISP</li><li>Python</li><li>Site grading tools</li><li>BIM workflows</li><li>GIS</li></ul></div>
+    <div><h3>Management</h3><ul class="tags"><li>Project management</li><li>Team leadership</li><li>QA/QC</li><li>Code compliance</li><li>Client acquisition</li><li>Training</li></ul></div>
+  </div>
+</section>
+
+<section class="sheet" id="experience">
+  <h2>Experience</h2>
+  <div class="job">
+    <div><h3>Caddlabz</h3><div class="m">Senior Remote Drafter / Designer<br>From May 2019</div></div>
+    <ul>
+      <li>Led multidisciplinary MEP, civil, structural, and architectural projects from concept to completion.</li>
+      <li>Wrote LISP routines that cut design time from 2–3 business days to 15–20 minutes and raised utilization to 93%.</li>
+      <li>Grew the company to 8 licensed engineers and 160+ billable hours a week in two years.</li>
+      <li>Ran finance, hiring, client acquisition, QA/QC, and code compliance, and trained engineers on AutoCAD, Civil 3D, Revit, SolidWorks, and more.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <div><h3>EN Engineering</h3><div class="m">Remote Drafter / Designer<br>May 2015 – December 2020</div></div>
+    <ul>
+      <li>Produced technical drawings in AutoCAD and Revit for multiple concurrent projects.</li>
+      <li>Designed a 400+ page plan set for a 60-acre VA expansion, coffer dam, and pond at Cape Canaveral National Cemetery. It met QA/QC standards and was accepted.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <div><h3>Tetra Tech</h3><div class="m">Remote Drafter / Designer<br>January 2016 – January 2020</div></div>
+    <ul>
+      <li>Delivered PV solar, structural, mechanical, and electrical designs with SolidWorks and civil software.</li>
+      <li>Built a program that grades an entire site plan in 30 seconds to 5 minutes.</li>
+      <li>Built a calculator for PV solar electrical distribution network parameters.</li>
+      <li>Managed a fully remote team of 4 drafters.</li>
+    </ul>
+  </div>
+  <div class="edu" style="border-top:2px solid var(--line)">
+    <div><h3 style="font-size:24px;color:var(--blue)">Education</h3>
+      <p><b>MBA, Entrepreneurship and Finance</b><br>University of Denver · in progress since January 2025</p>
+      <p style="margin:0"><b>B.S. Engineering Technology</b><br>University of Colorado Denver · 2016–2018, with honors</p></div>
+    <div><h3 style="font-size:24px;color:var(--blue)">Credentials</h3>
+      <p style="margin:0">PMP · LEED · AutoCAD Certification · Fundamentals of Engineering · OSHA 10 · Microsoft Office Specialist. Bilingual in English and Spanish.</p></div>
+  </div>
+</section>
+
+<section class="sheet" id="packages">
+  <h2>Packages<small>Pricing depends on size and scope. Message on WhatsApp for a quote.</small></h2>
+  <div class="pk">
+    <article class="pkg">
+      <h3>Residential plan set</h3>
+      <p class="q">Homes, cabins, garages, and additions</p>
+      <ul><li>Foundation, floor plan, and elevations</li><li>Building sections and wall details</li><li>Framing, truss, and roof layouts</li><li>Door, window, and header schedules</li><li>Electrical and plumbing plans</li></ul>
+      <a class="btn p wa-q" data-pkg="Residential plan set" href="#" target="_blank" rel="noopener">Request a quote</a>
+    </article>
+    <article class="pkg f">
+      <h3>Commercial permit set</h3>
+      <p class="q">Site and tenant improvement drawings</p>
+      <ul><li>Cover sheet with codes and sheet index</li><li>Site plan with accessibility and fire notes</li><li>Vehicle turning analysis</li><li>Demolition and proposed floor plans</li><li>Elevations and equipment layouts</li></ul>
+      <a class="btn p wa-q" data-pkg="Commercial permit set" href="#" target="_blank" rel="noopener">Request a quote</a>
+    </article>
+    <article class="pkg">
+      <h3>Landscape plan</h3>
+      <p class="q">Yards, courtyards, and multifamily sites</p>
+      <ul><li>Master plan with dimensions and notes</li><li>Planting and hardscape legend with quantities</li><li>Plant palette and theme boards</li><li>Revisions after client feedback</li></ul>
+      <a class="btn p wa-q" data-pkg="Landscape plan" href="#" target="_blank" rel="noopener">Request a quote</a>
+    </article>
+  </div>
+  <div class="pad" style="border-top:1px solid var(--line)">Need something else? I also take on ongoing drafting support, solar design, and custom CAD automation. <a href="#contact">Get in touch</a>.</div>
+</section>
+
+<section class="sheet contact" id="contact">
+  <h2>Contact</h2>
+  <div class="pad">
+    <p>Available for drafting, design, and project management work. Corpus Christi, Texas, working remotely.</p>
+    <a class="l" href="mailto:jordanbryantusaf@gmail.com">jordanbryantusaf@gmail.com</a>
+    <a class="l" href="tel:+17205256845">+1 720 525 6845</a>
+    <div class="btns">
+      <a class="btn wa" id="wa2" href="https://wa.me/17205256845?text=Hi%20Jordan%2C%20I%20saw%20your%20portfolio." target="_blank" rel="noopener">Message on WhatsApp</a>
+      <a class="btn" href="Jordan-Bryant-CV.pdf" download style="color:var(--bg);border-color:var(--bg)">Download CV</a>
+    </div>
+  </div>
+</section>
+
+<footer>© Jordan Bryant</footer>
+</div>
+
+<dialog id="lb"><img id="lbi" alt=""><div><span id="lbc"></span><button class="btn" type="button" id="lbx">Close</button></div></dialog>
+
+<script>
+(function(){
+document.querySelectorAll(".wa-q").forEach(function(a){a.href="https://wa.me/17205256845?text="+encodeURIComponent("Hi Jordan, I would like a quote for the "+a.dataset.pkg+".")});
+var lb=document.getElementById("lb"),lbi=document.getElementById("lbi"),lbc=document.getElementById("lbc");
+document.querySelectorAll(".card button").forEach(function(b){b.addEventListener("click",function(){var i=b.querySelector("img");lbi.src=i.src;lbi.alt=i.alt;lbc.textContent=b.parentNode.querySelector("b").textContent;lb.showModal()})});
+document.getElementById("lbx").addEventListener("click",function(){lb.close()});
+lb.addEventListener("click",function(e){if(e.target===lb)lb.close()});
+})();
+</script>
+</body>
+</html>
